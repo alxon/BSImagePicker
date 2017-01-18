@@ -29,7 +29,7 @@ final class CameraCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        cameraBackground.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2));   //from ttoxa-xa/BSImagePicker
+        cameraBackground.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2));   //from ttoxa-xa/BSImagePicker
         
         // Don't trigger camera access for the background
         guard AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) == .authorized else {
